@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h1 class="quotedTable">Quote Result</h1>
+    <table class="quotedTable">
+        <tr>
+            <th class="quotedTableCol">Symbol</th>
+            <th class="quotedTableCol">Stock Name</th>
+            <th class="quotedTableCol">Price(USD / Share)</th>
+        </tr>
+        <tr>
+            <td class="quotedTableCol">{{ quoted["symbol"] }}</td>
+            <td class="quotedTableCol">{{ quoted["name"] }}</td>
+            <td class="quotedTableCol">{{ quoted["price"] | usd }}</td>
+        </tr>
+    
+            
+        </table>
+
+{% endblock %}
+
